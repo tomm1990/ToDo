@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="il.ac.shenkar.javaee.model.User" table="User">
+		<id name="id" type="int" column="ID" >
+			<generator class="increment"/>
+		</id>
+		<property name="fname">
+			<column name="FNAME"/>
+		</property>
+		<property name="lname">
+			<column name="LNAME"/>
+		</property>
+		<property name="email" unique="true">
+			<column name="EMAIL"/>
+		</property>
+		<property name="password">
+			<column name="PASSWORD"/>
+		</property>
+	</class>
+	
+	<class name="il.ac.shenkar.javaee.model.Task" table="Task">
+		<id name="id" type="int" column="ID" >
+			<generator class="increment"/>
+		</id>
+		<property name="title">
+			<column name="TITLE"/>
+		</property>
+		<property name="body">
+			<column name="BODY"/>
+		</property>
+		<property name="userEmail">
+			<column name="USEREMAIL"/>
+		</property>
+	</class>
+	
+</hibernate-mapping>

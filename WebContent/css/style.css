@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    
+}
+
+main{
+    
+}
+
+#container{
+    width: 90%;
+    margin: 0px auto;
+    height : 100%;
+    border : 1px solid #d8d8d8;
+}
+
+header{
+    padding: 2%;
+    border : 1px solid #d8d8d8;
+}
+
+.logo{
+    //background: url('../images/icon.png') no-repeat;
+    //background-size: 100% 100%;
+    width :6%;
+    height : 6%;
+    float: left;
+    margin-right: 5%;
+}
+
+.logo > img{
+    width : 90%;
+}
+
+nav{
+    width : 88%;
+    float: left;
+}
+
+.clear{
+    clear : both;
+}
+
+
+#login, #tasks, #edit, #signup, #about{
+    padding: 3%;
+}
+
+#login, #signup {
+    margin: auto;
+    width : 50%;
+}
+
+#about {
+    margin: auto;
+    width : 80%;
+}
+
+
+
+#edit form{
+    height : 50%;
+    padding: 4%;
+}
+
+#signup form{
+    padding: 4%;
+    height : 500px;
+}
+
+.stud{
+    margin:2%;
+    margin-right: 3.33%;
+    float : left;
+    width : 28%;
+}
+
+.studContainer{
+    text-align: center;
+    padding-top: 4%;
+    
+}
+
+.alert{
+/*    display: none;*/
+    width: 100%;
+    float: left;
+}
+
+.pad{
+    margin-bottom: 5% !important;
+}
+
+.btn-default{
+    margin: auto;
+}
+
+.glyphicon{
+    margin : 3%;
+}
