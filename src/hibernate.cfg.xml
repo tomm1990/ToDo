@@ -3,6 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 <session-factory>
+
 		<property name="hibernate.connection.driver_class">
 			com.mysql.jdbc.Driver
 		</property>
@@ -14,7 +15,9 @@
 		<property name="show_sql">true</property>
 		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hibernate.hbm2ddl.auto">update</property>
+		
 		<!-- Mapping files -->
 		<mapping resource="toDoList.hbm.xml"/>
+		
 </session-factory>
 </hibernate-configuration>

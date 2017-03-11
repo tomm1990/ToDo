@@ -19,18 +19,16 @@
     <%
 		User user = (User)session.getAttribute("sessionCurrentUser");
     	List<Task> currentUserTasks=null;
-
 		String Fname = null, Lname = null;
         if(user!=null){
         	Fname = user.getFname();
         	Lname = user.getLname();
         	currentUserTasks =  (List<Task>)session.getAttribute("currentUserTasks");
-        }
-						
+        }			
 	%>
         <header>
             <div class="logo">
-                <img src="/ToDo/images/icon.png" alt="logo" title="ToDo"/>
+                <img src="<%=IViewValues.ICON_ABSOLUTE_PATH%>" alt="logo" title="ToDo"/>
             </div>
             <nav>
                 <ul class="nav nav-pills nav-justified">
@@ -79,9 +77,7 @@
                 <%
 	                String editStatus = null;
 	                editStatus = (String)request.getAttribute("EDIT_STATUS_TASK");
-	                
-                %>
-                
+                %>                
                 <%= editStatus %> Task // <%= "  "+Fname +" "+Lname %>
                 </div>
                 <%

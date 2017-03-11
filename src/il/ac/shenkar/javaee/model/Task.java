@@ -31,8 +31,8 @@ public class Task {
 	 * @param body
 	 * @param userName
 	 */
-	public Task( String title, String body, String userName ) {
-		setUserEmail(userName);
+	public Task( String title, String body, String userEmail ) {
+		setUserEmail(userEmail);
 		setTitle(title);
 		setBody(body);
 	}
@@ -109,5 +109,36 @@ public class Task {
 	@Override
 	public String toString() {
 		return "Task [_id=" + _id + ", _title=" + _title + ", _body=" + _body + ", _userEmail=" + _userEmail + "]";
-	}	
+	}
+
+	/**
+	 * equals method
+	 * @param obj
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Task other = (Task) obj;
+		if (_body == null) {
+			if (other._body != null)
+				return false;
+		} else if (!_body.equals(other._body))
+			return false;
+		if (_title == null) {
+			if (other._title != null)
+				return false;
+		} else if (!_title.equals(other._title))
+			return false;
+		if (_userEmail == null) {
+			if (other._userEmail != null)
+				return false;
+		} else if (!_userEmail.equals(other._userEmail))
+			return false;
+		return true;
+	}
 }

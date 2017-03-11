@@ -22,13 +22,20 @@ import il.ac.shenkar.javaee.view.IViewValues;
 
 /**
  * Servlet implementation class DaoController
+ * @author TomGoldberg, ItayNoama, OrBenDavid
  */
 @WebServlet("/daocontroller/*")
 public class DaoController extends HttpServlet implements IControllerValues, IViewValues{
 	private static final long serialVersionUID = 1L;
-	
+
+	/**
+	 * This is the central class in the log4j package. Most logging operations, except configuration, are done through this class.
+	 */
 	private static Logger DaoControllerLog = Logger.getLogger(DaoController.class);
      
+	/**
+	 * Provides a way to identify a user across more than one page request or visit to a Web site and to store information about that user.
+	 */
     private HttpSession session; 
     
     /**

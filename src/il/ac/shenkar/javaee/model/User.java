@@ -131,5 +131,41 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [_id=" + _id + ", _fname=" + _fname + ", _lname=" + _lname + ", _email=" + _email + ", _password="	+ _password + "]";
+	}
+
+	/**
+	 * equals method
+	 * @param obj
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		User other = (User) obj;
+		if (_email == null) {
+			if (other._email != null)
+				return false;
+		} else if (!_email.equals(other._email))
+			return false;
+		if (_fname == null) {
+			if (other._fname != null)
+				return false;
+		} else if (!_fname.equals(other._fname))
+			return false;
+		if (_lname == null) {
+			if (other._lname != null)
+				return false;
+		} else if (!_lname.equals(other._lname))
+			return false;
+		if (_password == null) {
+			if (other._password != null)
+				return false;
+		} else if (!_password.equals(other._password))
+			return false;
+		return true;
 	}	
 }

@@ -3,6 +3,7 @@ package il.ac.shenkar.javaee.model;
 /**
  * UserPlatformException java class
  * To deal with Exceptions related to data access objects of User Entity by Hibernate
+ * @author TomGoldberg, ItayNoama, OrBenDavid
  */
 public class UserPlatformException extends Exception{
 

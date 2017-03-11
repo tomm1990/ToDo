@@ -14,7 +14,7 @@ import il.ac.shenkar.javaee.controller.IControllerValues;
 
 /**
  * ToDoListDao data access object implementation responsible for delivering models
- * @author TomGoldberg
+ * @author TomGoldberg, ItayNoama, OrBenDavid
  * @version 1.1
  */
 public class ToDoListDao implements IToDoListDao, IModelValues {
@@ -38,6 +38,22 @@ public class ToDoListDao implements IToDoListDao, IModelValues {
 	 * ToDoListDaoLog log4j variable for logging messages
 	 */
 	private static Logger ToDoListDaoLog = Logger.getLogger(DaoController.class);
+	
+	/**
+	 * Getter to the Session 
+	 * @return session
+	 */
+	public Session getSession(){
+		return session;
+	}
+	
+	/**
+	 * Getter to the SessionFactory 
+	 * @return factory
+	 */
+	public SessionFactory getSessionFactory(){
+		return factory;
+	}
 
 	/**
 	 * Default C'tor

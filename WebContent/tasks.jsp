@@ -31,11 +31,10 @@
         			Lname = user.getLname();
         			currentUserTasks =  (List<Task>)session.getAttribute("currentUserTasks");
         		}
-						
 			%>
         <header>
             <div class="logo">
-                <img src="/ToDo/images/icon.png" alt="logo" title="ToDo"/>
+                <img src="<%=IViewValues.ICON_ABSOLUTE_PATH%>" alt="logo" title="ToDo"/>
             </div>
             <nav>
                 <ul class="nav nav-pills nav-justified">
@@ -94,47 +93,42 @@
                    <table class="table table-hover">
                      <thead>
                        <tr>
-                         <th>#</th>
+                       	 <th>#</th>
+                         <th>ID</th>
                          <th>Title</th>
                          <th>Description</th>
-<!--                     <th>Email</th>           -->
                           <th>Edit</th>
                          <th>Remove</th>
                        </tr>
                      </thead>
                      <tbody>
                      	<% 
-                     		//response.setHeader("REFRESH", "0"); 
-                     		String title=null, body=null, usere=null;
-                     		int id = 0 ;
-                     		if(currentUserTasks != null)
-                     		{
-                     			for(int i=0 ; i < currentUserTasks.size(); i++){
-                     				id = currentUserTasks.get(i).getId();
-                         			title = currentUserTasks.get(i).getTitle();
-                         			body = currentUserTasks.get(i).getBody();
-                         			usere = currentUserTasks.get(i).getUserEmail();
-                         			%>
-                         			<tr>
-				                         <td><%= id %></td>
-				                         <td><%= title %></td>
-				                         <td><%= body %></td>
-<!--				                     <td><%= usere %></td>        -->
-				                         <td>  
-				                            <a href="edit?to=exists&id=<%= id %>" type="button" class="btn btn-default">
-				                                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 
-				                            </a>
-				                        </td>
-				                        <td>  
-				                            <a href="tasks?&to=remove_exists&id=<%= id %>" type="button" class="btn btn-default">
-				                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 
-				                            </a>
-				                        </td>
-				                     </tr>	
-                         			<%
-                     			}
-                     		}
-                     	%>
+                     	String title=null, body=null, usere=null;
+                     	int id = 0 ;
+                   		if(currentUserTasks != null){
+                     		for(int i=0 ; i < currentUserTasks.size(); i++){
+                     			id = currentUserTasks.get(i).getId();
+                       			title = currentUserTasks.get(i).getTitle();
+                       			body = currentUserTasks.get(i).getBody();
+                       			usere = currentUserTasks.get(i).getUserEmail();
+                        %>
+                         <tr>
+                         	<td><%= i+1 %></td>
+			                <td><%= id %></td>
+		                    <td><%= title %></td>
+		                    <td><%= body %></td>
+			                <td>  
+				              <a href="edit?to=exists&id=<%= id %>" type="button" class="btn btn-default">
+			                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 
+			                  </a>
+		                    </td>
+			                <td>  
+		                      <a href="tasks?&to=remove_exists&id=<%= id %>" type="button" class="btn btn-default">
+		                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 
+			                  </a>
+			                </td>
+			             </tr>	
+                     	<%	}	}	%>
                      </tbody>
                    </table>
                 </div>
@@ -160,19 +154,11 @@
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <strong><%= reasonTasksInfo %></strong>
             </div> 
-            
-<!--             <div class="alert alert-danger pad" style="display:visible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <strong>Connection Problems</strong>
-            </div> -->
-<!--              </form>
- -->         </main>
+          </main>
     </div>
     <%
-response.setHeader("Cache-Control","no-cache"); //HTTP 1.1
-response.setHeader("Pragma","no-cache"); //HTTP 1.0
-/* response.setDateHeader ("Expires", 0);
- *///prevents caching at the proxy server
-%>
+	response.setHeader("Cache-Control","no-cache"); //HTTP 1.1
+	response.setHeader("Pragma","no-cache"); //HTTP 1.0
+	%>
 </body>
 </html>

@@ -3,6 +3,7 @@ package il.ac.shenkar.javaee.model;
 /**
  * TasksPlatformException java class
  * To deal with Exceptions related to data access objects of Task Entity by Hibernate
+ * @author TomGoldberg, ItayNoama, OrBenDavid
  */
 public class TaskPlatformException extends Exception{
 

@@ -18,7 +18,7 @@
     <div id="container">
         <header>
             <div class="logo">
-                <img src="/ToDo/images/icon.png" alt="logo" title="ToDo"/>
+                <img src="<%=IViewValues.ICON_ABSOLUTE_PATH%>" alt="logo" title="ToDo"/>
             </div>
             <nav>
                 <ul class="nav nav-pills nav-justified">
@@ -34,7 +34,6 @@
                         <a href="tasks">
                             <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
                             Tasks 
-                            
                         </a>
                     </li>
                     
@@ -103,7 +102,6 @@
                     <label>Retype Password</label>
                     <input style="border:<%=border_pass%>" type="password" class="form-control" id="repassword" name="repassword">
                   </div>
-
 
                 <button name="signUpButton" value="submitSignUpButton" type="submit" class="btn btn-primary">Sign Up</button>
                 

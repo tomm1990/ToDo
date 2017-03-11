@@ -1,6 +1,7 @@
 package il.ac.shenkar.javaee.model;
 
 public interface IModelValues {
+	// first message of instance
 	public static final String GET_INSTANCE = "Initializing instance of ToDoListDao";
 	
 	// addTask values

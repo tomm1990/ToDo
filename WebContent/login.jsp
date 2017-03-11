@@ -19,7 +19,7 @@
     <div id="container">
         <header>
             <div class="logo">
-                <img src="/ToDo/images/icon.png" alt="logo" title="ToDo"/>
+                <img src="<%=IViewValues.ICON_ABSOLUTE_PATH%>" alt="logo" title="ToDo"/>
             </div>
             <nav>
                 <ul class="nav nav-pills nav-justified">
@@ -78,9 +78,9 @@
                         <button name="loginButton" value="submitButton" type="submit" class="btn btn-default pad"/>Submit</button>
                         
                         
-                            <a style="float:right;" href="signup.jsp" class="btn btn-default pad"/>
-                              <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Sign Up
-                            </a>
+                        <a style="float:right;" href="signup.jsp" class="btn btn-default pad"/>
+                          <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Sign Up
+                        </a>
                         
                     </form>
 					<%
@@ -94,12 +94,10 @@
 							displayAlert = "none";
 						}
 					%> 
-
                     <div class="alert alert-warning alert-<%= styleAlert %> pad" style="display:<%= displayAlert %>" role="alert">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <strong><%=reasonMainAlert %></strong> <%= reasonDesAlert %>
                     </div>
-                    
                 </div>
             </div>
          </main>
