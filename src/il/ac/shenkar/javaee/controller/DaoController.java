@@ -239,10 +239,13 @@ public class DaoController extends HttpServlet implements IControllerValues, IVi
 		
 		String nextUrl = null;
 		
+		String s = (String)request.getParameter("signUpButton");
+		
 		if(	fromUrlEndsWith.contains(LOGIN) ||
-				fromUrlEndsWith.contains(LOGOUT) ||(  fromUrlEndsWith.contains( TASKS )&& request.getParameter("loginButton").equals("submitButton") ) ){
+				fromUrlEndsWith.contains(LOGOUT) ||
+				(  fromUrlEndsWith.contains( TASKS ) && s.equals("submitSignUpButton") ) ){
 			nextUrl = loginPageHandler(request, response);
-		} else if( fromUrlEndsWith.contains( SIGNUP ) || fromUrlEndsWith.contains( TASKS ) ){
+		} else if( fromUrlEndsWith.contains( SIGNUP ) || (fromUrlEndsWith.contains( TASKS )&& request.getParameter("signUpButton").equals("submitSignUpButton")) ){
 			nextUrl = signUpPageHandler(request, response);
 		} else if(fromUrlEndsWith.contains(EDIT)){
 			String button = request.getParameter("submitTaskButton");
@@ -365,7 +368,14 @@ public class DaoController extends HttpServlet implements IControllerValues, IVi
 	 */
 	private String loginPageHandler(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		String button = request.getParameter("loginButton");
-		return (button.equals("submitButton"))? loginProcess( request, response ) : LOGIN_PATH;
+		String button2 = request.getParameter("signUpButton");
+		if(button != null&&button.equals("submitButton")){
+			return loginProcess( request, response );
+		}
+		if(button2 != null&&button2.equals("submitSignUpButton")){
+			return signUpPageHandler( request, response );
+		}
+		return LOGIN_PATH;
 	}
 	
 	/**
