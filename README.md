@@ -20,7 +20,7 @@ In this repository you may find all the files that you need for make your own To
 
 ## Instructions
 1. To Login :
-  * You may enter username : orbenda1905@gmail.com, password : 111
+  * You may enter username - orbenda1905@gmail.com, password - 111
   * Or you may signup using the 'SignUp' button
 2. Tasks : 
   Here you will find all the current user tasks list using Bootstrap table
