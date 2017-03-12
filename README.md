@@ -3,12 +3,12 @@
 Hello, this is ToDo List Web Application - a final project in JavaEE course by Haim Michael, 
 In this repository you may find all the files that you need for make your own ToDo LIST.
 
-# Bonuses
-0.5 pt - for developing a JSP document that uses java beans (using jsp:useBean and jsp:getProperty at the minimum). 
-0.5 pt - for implementing logging messages using Log4J and MongoDB. 
-2 pt - for developing a nice user interface using the bootstrap library (www.getbootstrap.com). In order to get this bonus you should use bootstrap in all pages.
+## Bonuses
+1. 0.5 pt - for developing a JSP document that uses java beans (using jsp:useBean and jsp:getProperty at the minimum). 
+2. 0.5 pt - for implementing logging messages using Log4J and MongoDB. 
+3. 2 pt - for developing a nice user interface using the bootstrap library (www.getbootstrap.com). In order to get this bonus you should use bootstrap in all pages.
 
-# Explaination how to configure the system
+## Explaination how to configure the system
 1. Download or Clone the project into your workspace directory
 2. Open Eclipse Java EE (Or similar), and Import the project
 3. Run Apache Tomcat v8 configurations
@@ -18,7 +18,7 @@ In this repository you may find all the files that you need for make your own To
 7. Authorize username : java, password : advance to 'todolistproject' database (utf-8 ci general)
 8. Right click on login.jsp -> Run As -> Run On Server
 
-# Instructions
+## Instructions
 1. To Login :
   * You may enter username : orbenda1905@gmail.com, password : 111
   * Or you may signup using the 'SignUp' button
@@ -41,7 +41,7 @@ In this repository you may find all the files that you need for make your own To
   * You should type a password and repeat it perfectly
   * You will get an error message if one of those does not applies
   
-  # Authors
+## Authors
   * Tom Goldberg
   * Itay Noama
   * Or Ben David
