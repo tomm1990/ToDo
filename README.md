@@ -19,22 +19,22 @@ In this repository you may find all the files that you need for make your own To
 8. Right click on login.jsp -> Run As -> Run On Server
 
 ## Instructions
-1. To Login :<br>
+1. <b>To Login</b> <br>
   * You may enter username - orbenda1905@gmail.com, password - 111
   * Or you may signup using the 'SignUp' button
-2. Tasks : <br>
+2. <b>Tasks</b>  <br>
   Here you will find all the current user tasks list using Bootstrap table
   * You may add / update / delete your own tasks using the tasks.jsp gui
   * 'Add Task' button for adding task (leads to edit.jsp page)
   * 'Update' button to update task (leads to edit.jsp page)
   * 'Delete' button to delete task (refresh tasks.jsp page)
-3. About :<br>
+3. <b>About</b> <br>
   Here you will find the project authors - was designed and developed by
   * Note that, if the current session user is available, link to 'Login' will be disabled
-4. Logout : <br>
+4. <b>Logout</b> <br>
   Leads to login page.
   * Removed current user session
-5. Signup :<br>
+5. <b>Signup</b> <br>
   Enables to signup a new user to the system
   * You should provide at least 3 characters long First Name, and Last name.
   * You should provide an authentic email address (is a must)
