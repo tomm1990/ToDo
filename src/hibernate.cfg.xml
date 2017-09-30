@@ -10,7 +10,7 @@
 		<property name="hibernate.connection.url">
 			jdbc:mysql://localhost:8889/todolistproject
 		</property>
-		<property name="hibernate.connection.username">java</property>
+		<property name="hibernate.connection.username">javax</property>
 		<property name="hibernate.connection.password">advance</property>
 		<property name="show_sql">true</property>
 		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
